@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @stekker.deadline %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @stekker.memo %>
+</p>
+
+<%= link_to 'Edit', edit_stekker_path(@stekker) %> |
+<%= link_to 'Back', stekkers_path %>

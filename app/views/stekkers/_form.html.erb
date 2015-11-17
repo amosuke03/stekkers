@@ -1,0 +1,25 @@
+<%= form_for(@stekker) do |f| %>
+  <% if @stekker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stekker.errors.count, "error") %> prohibited this stekker from being saved:</h2>
+
+      <ul>
+      <% @stekker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :deadline %><br>
+    <%= f.text_field :deadline %>
+  </div>
+  <div class="field">
+    <%= f.label :memo %><br>
+    <%= f.text_area :memo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
